@@ -1,2 +1,2 @@
 # hosman-frontend
-Frontenb Built in React + Redux for HosMan Project.
+Frontend Built in React + Redux for HosMan Project.
