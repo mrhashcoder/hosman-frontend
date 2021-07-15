@@ -4,12 +4,10 @@ import { useHistory } from 'react-router-dom';
 import SLUGS from 'resources/slugs';
 import {
     IconAgents,
-    IconArticles,
     IconContacts,
     IconIdeas,
     IconLogout,
     IconOverview,
-    IconSettings,
     IconSubscription,
     IconTickets
 } from 'assets/icons';
@@ -32,7 +30,6 @@ function SidebarComponent() {
     const theme = useTheme();
     const classes = useStyles({ theme });
     const isMobile = window.innerWidth <= 1080;
-
     async function logout() {
         push(SLUGS.loginWarden);
     }

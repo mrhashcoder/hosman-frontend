@@ -14,8 +14,8 @@ function Routes() {
         window.scrollTo(0, 0);
     }, [pathname]);
 
-    const isWardenAuth = true;
-    const isHostellerAuth = false;
+    const isWardenAuth = false;
+    const isHostellerAuth = true;
 
     if(isWardenAuth){
         return <WardenSection />
