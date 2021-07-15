@@ -24,7 +24,7 @@ const useStyles = createUseStyles({
             level > 1 ? 'none' : `3px solid ${theme.color.darkGrayishBlue}`
     },
     title: {
-        fontSize: 16,
+        fontSize: 18,
         lineHeight: '20px',
         letterSpacing: '0.2px',
         color: ({ theme, isActive }) => (isActive ? theme.color.paleBlue : theme.color.grayishBlue),

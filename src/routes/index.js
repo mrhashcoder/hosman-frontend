@@ -14,7 +14,7 @@ function Routes() {
         window.scrollTo(0, 0);
     }, [pathname]);
 
-    const isWardenAuth = false;
+    const isWardenAuth = true;
     const isHostellerAuth = true;
 
     if(isWardenAuth){
