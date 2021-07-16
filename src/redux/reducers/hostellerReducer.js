@@ -1,22 +1,22 @@
 import ActionTypes from '../action_types'
 
 const intialState = {
-    hostellers : [
-        {
-            id : "1",
-            name : "Abhishek Sharma",
-            rollno : "21812019",
-            roomno : "514"
-        }
-    ],
+    hostellers : []
 }
 
 
 const hostellerReducer = (state = intialState , action) => {
-    switch (action) {
+    switch (action.type) {
         case ActionTypes.SET_HOSTELLERS:
-            return state
-
+            return {
+                ...state,
+                hostellers : action.payload
+            }
+        case ActionTypes.FETCH_HOSTERLLERS:
+            return{
+                ...state,
+                hostellers : action.payload
+            }
         default:
             return state
     }
