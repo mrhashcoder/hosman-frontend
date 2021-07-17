@@ -1,7 +1,8 @@
 
 const EndPoints = {
     hostellerList : '/hostellerlist',
-    requestList : 'requestlist'
+    requestList : '/requestlist',
+    noticeList : '/noticelist',
 }
 
 
