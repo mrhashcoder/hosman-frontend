@@ -1,7 +1,8 @@
 import ActionTypes from '../action_types'
 
 const intialState = {
-    hostellers : []
+    hostellers : [],
+    requests : []
 }
 
 
@@ -16,6 +17,11 @@ const hostellerReducer = (state = intialState , action) => {
             return{
                 ...state,
                 hostellers : action.payload
+            }
+        case ActionTypes.FETCH_REQUESTS:
+            return {
+                ...state,
+                requests : action.payload
             }
         default:
             return state

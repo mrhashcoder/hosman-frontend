@@ -1,6 +1,7 @@
 
 const EndPoints = {
-    users : '/users',
+    hostellerList : '/hostellerlist',
+    requestList : 'requestlist'
 }
 
 

@@ -2,12 +2,34 @@ import ActionTypes from '../action_types'
 import axios from '../api/axios';
 import EndPoints from '../api/endPoints';
 
-export const fetchHosterllers = () => async(dispatch) => {
-    const response = await axios.get(EndPoints.users);
+export const fetchHosterllers = (authToken) => async(dispatch) => {
+    const response = await axios.get(EndPoints.hostellerList , {
+        headers : {
+            wardenauth : authToken
+        }
+    }).catch(err => {
+        // console.error(err)
+    });
+    
     dispatch({
         type : ActionTypes.FETCH_HOSTERLLERS,
-        payload : response.data
+        payload : response.data.hostellerList
     });
+}
+
+export const fetchRequests = (authToken) => async(dispatch) => {
+    const response = await axios.get(EndPoints.requestList , {
+        headers : {
+            wardenauth : authToken
+        }
+    }).catch(err => {
+        // 
+    });
+
+    dispatch({
+        type : ActionTypes.FETCH_REQUESTS,
+        payload : response.data.requestList
+    })
 }
 
 export const setHostellers = (hostellers) => {
@@ -17,6 +39,8 @@ export const setHostellers = (hostellers) => {
         payload : hostellers
     }
 }
+
+
 
 
 
