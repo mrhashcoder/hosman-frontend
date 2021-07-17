@@ -32,7 +32,7 @@ function Requests(props) {
 
     return (
         <div>
-            <h1>Requests for Hostellers</h1>
+            <h1>Requests of Hosteller</h1>
             <hr />
             <table className="table table-striped">
                 <thead>
